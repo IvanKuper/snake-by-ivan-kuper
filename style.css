@@ -1,0 +1,113 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-image: url(./imgs/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logoSpan {
+  color: yellow;
+}
+.logoSpan:hover {
+  color: white;
+}
+.logo {
+  width: 2rem;
+}
+.profilePic {
+  width: 4rem;
+  border-radius: 100%;
+  margin-left: 1rem;
+}
+a {
+  color: yellow;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+.footer {
+  width: 100%;
+  background-color: #212529;
+  color: white;
+  text-align: center;
+}
+/* new projects */
+#app {
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+#resetBtn {
+  margin: 10px;
+  width: 370px;
+  height: 50px;
+  color: black;
+  font-weight: 700;
+  background-color: #ffff00;
+}
+#btn {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+#grid {
+  display: grid;
+  grid-template-columns: repeat(10, fr);
+  border: 5px solid black;
+  width: 70vmin;
+}
+.cell {
+  background-color: lightgray;
+  border: 1px solid gray;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.snake {
+  background-color: green;
+  border-color: darkgreen;
+}
+.apple {
+  color: red;
+  background-color: darkred;
+}
+.border-right {
+  border-right-color: red;
+}
+.border-left {
+  border-left-color: red;
+}
+.border-top {
+  border-top-color: red;
+}
+.border-bottom {
+  border-bottom-color: red;
+}
+
+.keyboard {
+  margin: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: lightblue;
+  border: 2px solid blue;
+  border-radius: 10px;
+}
+#w,
+#s,
+#a,
+#d {
+  margin: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: yellow;
+  border: 2px solid black;
+  border-radius: 10px;
+}

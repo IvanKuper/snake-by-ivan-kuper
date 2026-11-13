@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./imgs/logo.png" type="image/icon type" />
+    <title>Classic Snake</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- NavBar -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-light">
+      <div class="container">
+        <div class="bumblelogo">
+          <a class="navbar-brand" href="index.html"
+            ><img class="logo" src="imgs/logo.png" alt="" />
+            <span class="logoSpan">Classic Snake</span></a
+          >
+        </div>
+        <div class="collapse navbar-collapse" zid="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <form class="d-flex" role="profile">
+            <div class="profile">
+              <span class="text-white">
+                <a href="https://www.linkedin.com/in/ivankuper/" target="_blank"
+                  >Ivan Kuper
+                  <img
+                    class="profilePic"
+                    src="imgs/Profile.jpg"
+                    alt="Profile image" /></a
+              ></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+    <div id="app">
+      <div class="keyboard">
+        <div class="movingKeys">
+          <h2>Moving keys</h2>
+          <div id="w">W-MOVE UP</div>
+          <div id="s">S-MOVE DOWN</div>
+          <div id="a">A-MOVE LEFT</div>
+          <div id="d">D-MOVE RIGHT</div>
+        </div>
+      </div>
+      <div id="grid"></div>
+    </div>
+
+    <div id="btn"><button id="resetBtn">New Game</button></div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto pt-3">
+      <p class="copyright">
+        Coded & Designed By:
+        <strong
+          ><a href="https://ivankuper.netlify.app/" target="_blank"
+            >Ivan Kuper</a
+          ></strong
+        >
+        © All rights reserved.
+      </p>
+      <div class="socials">
+        <a
+          class="link"
+          target="_blank"
+          href="https://www.facebook.com/ivankuper7"
+          ><i class="socials fab fa-facebook fa-2x px-1"></i
+        ></a>
+        <a
+          class="link"
+          target="_blank"
+          href="https://www.instagram.com/ivan_kuper/"
+          ><i class="socials fab fa-instagram fa-2x px-1"></i
+        ></a>
+        <a class="link" target="_blank" href="https://twitter.com/Ivan7Kuper"
+          ><i class="socials fab fa-twitter fa-2x px-1"></i
+        ></a>
+        <a
+          class="link"
+          target="_blank"
+          href="https://www.linkedin.com/in/ivan-kuper-b99581225/"
+          ><i class="fa-brands fa-linkedin fa-2x px-1"></i
+        ></a>
+      </div>
+    </footer>
+    <!-- End  Footer -->
+    <script src="./app.js"></script>
+  </body>
+</html>
