@@ -33,6 +33,17 @@ var startGame = () => {
 window.addEventListener("keypress", (e) => {
   keyHandrel(e);
 });
+// Arrow keys and taps on the on-screen keys steer too (phones have no W/A/S/D)
+var arrows = { ArrowUp: "W", ArrowDown: "S", ArrowLeft: "A", ArrowRight: "D" };
+window.addEventListener("keydown", (e) => {
+  if (arrows[e.key]) {
+    e.preventDefault();
+    keyHandrel({ key: arrows[e.key] });
+  }
+});
+["w", "a", "s", "d"].forEach((id) =>
+  document.getElementById(id).addEventListener("click", () => keyHandrel({ key: id }))
+);
 var keyHandrel = (e) => {
   let key = e.key.toUpperCase();
 
@@ -83,8 +94,7 @@ var moveSnake = () => {
 var checkCollision = () => {
   //hitiing self
   if (snake.length != new Set(snake).size) {
-    console.log("hit self");
-    endGame();
+    endGame("self");
   }
   //------------hitiing walls
   //right wall
@@ -95,14 +105,12 @@ var checkCollision = () => {
     endGame("left");
   } //top wall
   else if (snake[0] - amountOfBlocks < 0 && direction == -amountOfBlocks) {
-    console.log("hit top");
-    endGame();
+    endGame("top");
   } else if (
     snake[0] + amountOfBlocks >= amountOfBlocks ** 2 &&
     direction == amountOfBlocks
   ) {
-    console.log("hit bottom");
-    endGame();
+    endGame("bottom");
   }
 };
 
@@ -124,7 +132,7 @@ var checkAppleEat = () => {
 
 var endGame = (death) => {
   clearInterval(gameInterval);
-  collision = true;
+  collison = true;
 
   if (death == "self") {
   } else {

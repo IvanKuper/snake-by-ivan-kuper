@@ -5,6 +5,8 @@ body {
   background-image: url(./imgs/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  /* the title and the snake sit at the edges of the picture; keep the empty middle behind the board */
+  background-position: center;
 }
 .logoSpan {
   color: yellow;
@@ -110,4 +112,46 @@ a:hover {
   background-color: yellow;
   border: 2px solid black;
   border-radius: 10px;
+}
+#w,
+#s,
+#a,
+#d {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Phones: board on top, the four keys below as big tap targets */
+@media (max-width: 720px) {
+  #app {
+    flex-direction: column-reverse;
+    margin: 0.5rem;
+  }
+  #grid {
+    width: 92vw;
+  }
+  .keyboard {
+    margin: 0.5rem 0 0;
+    width: 92vw;
+  }
+  .movingKeys {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .movingKeys h2 {
+    grid-column: 1 / -1;
+    font-size: 1rem;
+    margin: 0;
+  }
+  #w,
+  #s,
+  #a,
+  #d {
+    margin: 0;
+    padding: 0.9rem 0.5rem;
+  }
+  #resetBtn {
+    width: 92vw;
+  }
 }
