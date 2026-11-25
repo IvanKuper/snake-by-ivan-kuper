@@ -4,9 +4,15 @@
 body {
   background-image: url(./imgs/bg.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  /* the title and the snake sit at the edges of the picture; keep the empty middle behind the board */
+  /* contain keeps the "Classic Snake" title and the snake at the edges whole */
+  background-size: contain;
   background-position: center;
+}
+/* below this width the picture's title runs into the keys panel; the navbar already names the game */
+@media (max-width: 1699px) {
+  body {
+    background-image: none;
+  }
 }
 .logoSpan {
   color: yellow;
