@@ -20,58 +20,59 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" href="./imgs/logo.png" type="image/icon type" />
+    <link rel="icon" href="./imgs/logo.png" type="image/png" />
     <meta name="description" content="Classic Snake in the browser: eat the food, grow longer and do not hit the walls. Play with W A S D or the on-screen keys." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Classic Snake" />
     <meta property="og:description" content="Classic Snake in the browser: eat the food, grow longer and do not hit the walls. Play with W A S D or the on-screen keys." />
     <meta property="og:url" content="https://snake-by-ivan-kuper.netlify.app/" />
     <meta property="og:image" content="https://snake-by-ivan-kuper.netlify.app/og.jpg" />
+    <meta name="theme-color" content="#212529" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Classic Snake</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
     <!-- NavBar -->
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-light">
+    <nav class="navbar navbar-dark bg-dark">
       <div class="container">
-        <div class="bumblelogo">
-          <a class="navbar-brand" href="index.html"
-            ><img class="logo" src="imgs/logo.png" alt="" />
-            <span class="logoSpan">Classic Snake</span></a
-          >
-        </div>
-        <div class="collapse navbar-collapse" zid="navbarTogglerDemo03">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-          <form class="d-flex" role="profile">
-            <div class="profile">
-              <span class="text-white">
-                <a href="https://www.linkedin.com/in/ivankuper/" target="_blank"
-                  >Ivan Kuper
-                  <img
-                    class="profilePic"
-                    src="imgs/Profile.jpg"
-                    alt="Profile image" /></a
-              ></span>
-            </div>
-          </form>
-        </div>
+        <a class="navbar-brand" href="index.html"
+          ><img class="logo" src="imgs/logo.png" alt="" width="26" height="32" />
+          <span class="logoSpan">Classic Snake</span></a
+        >
+        <a class="portfolio-link" href="https://ivankuper.github.io/"
+          ><span class="d-none d-sm-inline">Ivan Kuper &middot; </span>Portfolio
+          <img class="profilePic" src="imgs/Profile.jpg" alt="" width="40" height="40"
+        /></a>
       </div>
     </nav>
     <!-- End of Navbar -->
-    <div id="app">
-      <div class="keyboard">
-        <div class="movingKeys">
+    <main>
+      <h1 class="visually-hidden">Classic Snake</h1>
+      <div class="scorebar" aria-live="polite">
+        <span>Score <strong id="score">0</strong></span>
+        <span>Best <strong id="best">0</strong></span>
+      </div>
+      <div id="app">
+        <div class="keyboard">
           <h2>Moving keys</h2>
-          <div id="w">W-MOVE UP</div>
-          <div id="s">S-MOVE DOWN</div>
-          <div id="a">A-MOVE LEFT</div>
-          <div id="d">D-MOVE RIGHT</div>
+          <div class="movingKeys">
+            <button type="button" id="w">W &ndash; move up</button>
+            <button type="button" id="s">S &ndash; move down</button>
+            <button type="button" id="a">A &ndash; move left</button>
+            <button type="button" id="d">D &ndash; move right</button>
+          </div>
+          <p class="hint">Arrow keys work too. On a phone, swipe on the board.</p>
+        </div>
+        <div class="board">
+          <div id="grid" role="img" aria-label="Snake board"></div>
+          <div id="overlay" class="overlay show">
+            <p id="overlayText">Press a key, swipe or tap Start</p>
+            <button type="button" id="startBtn">Start</button>
+          </div>
         </div>
       </div>
-      <div id="grid"></div>
-    </div>
-
-    <div id="btn"><button id="resetBtn">New Game</button></div>
+      <div id="btn"><button id="resetBtn" type="button">New Game</button></div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto pt-3">
